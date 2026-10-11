@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support · NOSIG</title>
+    <meta name="description" content="How NOSIG builds the enroute corridor, where its weather comes from, how it works offline, and how to contact us." />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    
+  </head>
+  <body>
+    <header class="site-head wrap">
+      <a class="brand" href="/"><img src="/assets/img/icon-96.png" alt="" width="48" height="48" />NOSIG</a>
+      <nav aria-label="Site">
+        <a href="/support/" aria-current="page">Support</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+    </header>
+
+    <main class="page wrap">
+      <article>
+        <h1>Support</h1>
+        <p class="updated">
+          Questions, a wrong airport or a feature you miss: write to
+          <a href="mailto:support@nosigapp.com">support@nosigapp.com</a>. A screenshot and the route you entered help a
+          lot.
+        </p>
+
+        <h2>How it works</h2>
+        <dl>
+          <dt>How is the enroute corridor built?</dt>
+          <dd>
+            NOSIG draws the great-circle route from departure to destination and lists every airport within the width you
+            choose in Settings (100, 140 or 180 NM either side) that has scheduled airline service and a runway at least as
+            long as your minimum.
+          </dd>
+
+          <dt>Which time does the TAF on each card use?</dt>
+          <dd>
+            Your ETD for the departure airport, the estimated arrival time for the destination, and the time you are abeam
+            for every enroute airport. Times assume 15 minutes from off-blocks to the start of the route and a ground speed
+            of 440 kt.
+          </dd>
+
+          <dt>How often is the weather updated?</dt>
+          <dd>
+            METARs, TAFs and SIGMETs are refreshed every 10 minutes while the app is open, SIGWX charts every 30 minutes.
+          </dd>
+
+          <dt>Does it work without internet?</dt>
+          <dd>
+            Yes. Open your route while you are still online. Without a connection NOSIG shows the last data it downloaded and
+            how old it is. SIGMETs that have expired stay on the map for up to six hours, faded and marked with their end
+            time.
+          </dd>
+
+          <dt>Why does an airport show no METAR?</dt>
+          <dd>Either the airport does not report METARs or its reports are not in the NOAA Aviation Weather Center feed.</dd>
+
+          <dt>Which SIGWX charts are included?</dt>
+          <dd>
+            High level (FL250–FL600) for ICAO area H, which covers Europe, the North Atlantic and North America, with the
+            other WAFC Washington areas selectable; mid level (FL100–FL450) for the North Atlantic area.
+          </dd>
+
+          <dt>Can I change the units?</dt>
+          <dd>
+            Yes, in Settings: metric (metres, °C, hPa) or U.S. (feet, °F, inHg). Wind stays in knots, distances in nautical
+            miles and levels in feet. The raw METAR and TAF text is never changed.
+          </dd>
+
+          <dt>How do I delete my notes and saved data?</dt>
+          <dd>Delete a note from its airport card. Deleting the app removes everything it saved.</dd>
+        </dl>
+
+        <h2>Important</h2>
+        <p>
+          NOSIG is for situational awareness. It is not an official briefing and not for navigation. Always use your
+          operator’s briefing and the latest official information.
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap">
+        <p>© 2026 NOSIG. Not affiliated with NOAA, ICAO or any airline.</p>
+        <nav aria-label="Footer">
+          <a href="/support/">Support</a>
+          <a href="/privacy/">Privacy</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

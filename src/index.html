@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NOSIG: METAR, TAF and enroute alternates for your route</title>
+    <meta
+      name="description"
+      content="NOSIG finds every airport within 140 NM of your route and shows its METAR and the TAF for the time you pass it. SIGMETs, SIGWX charts and an aviation chart map, all usable in airplane mode." />
+    <meta name="apple-itunes-app" content="app-id=6821109646" />
+    <meta name="theme-color" content="#cbdae8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#08111d" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="NOSIG: METAR, TAF and enroute alternates for your route" />
+    <meta property="og:description" content="Every enroute alternate, with the weather for when you pass it. Works in airplane mode." />
+    <meta property="og:image" content="https://nosigapp.com/assets/img/og.png" />
+    <meta property="og:url" content="https://nosigapp.com/" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/assets/fonts/sofia-sans-extra-condensed.woff" as="font" type="font/woff" crossorigin />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <!-- ANALYTICS -->
+  </head>
+  <body>
+    <header class="site-head wrap">
+      <a class="brand" href="/"><img src="/assets/img/icon-96.png" alt="" width="48" height="48" />NOSIG</a>
+      <nav aria-label="Site">
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <!-- HERO_CHART -->
+        <div class="hero-inner wrap">
+          <div class="legend-box">
+            <h1 id="hero-title">Every enroute alternate, with the weather for when you pass it.</h1>
+            <p>
+              Enter departure, destination and ETD. NOSIG draws the great-circle route, finds every airport within
+              140&nbsp;NM of it and shows each one’s METAR and the TAF for the time you are abeam. Load it before you
+              push back and it still works in airplane mode.
+            </p>
+            <a class="button" href="https://apps.apple.com/app/id6821109646">Download on the App Store</a>
+            <span class="small">For iPhone.</span>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="card-title">
+        <div class="wrap split">
+          <div class="phone">
+            <img src="/assets/img/airport-card.webp" width="620" height="1271" loading="lazy" alt="Airport card for Istanbul Airport with METAR, TAF at the abeam time and runway wind" />
+          </div>
+          <div class="prose">
+            <h2 id="card-title">One card for each airport on the way</h2>
+            <p>
+              Tap any airport for the raw METAR, the TAF cut to the moment you pass it with its worst-case category, the
+              best runway for the current wind with head and crosswind, the longest runway and your own notes.
+            </p>
+            <div class="metar">
+              METAR LTFM 101020Z 22008KT 200V260 CAVOK 26/09 Q1016 <span class="nosig">NOSIG</span>
+              <small>NOSIG: no significant change expected. The word every pilot hopes to read at the end of a METAR.</small>
+            </div>
+            <p>
+              Departure and destination use your ETD and ETA. Enroute airports use the time you are abeam, worked out
+              from the distance along the route.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="features-title">
+        <div class="wrap">
+          <h2 id="features-title">Drawn like a chart, not a road map</h2>
+          <ul class="features">
+            <li>
+              <span class="mark mark-dots" aria-hidden="true">
+                <span style="background: var(--vfr)"></span><span style="background: var(--mvfr)"></span>
+                <span style="background: var(--ifr)"></span><span style="background: var(--lifr)"></span>
+              </span>
+              <div>
+                <h3>Aviation chart map</h3>
+                <p>
+                  FIR boundaries and names, coastlines and cities, and every airport coloured VFR, MVFR, IFR or LIFR from
+                  its latest METAR. Light and dark.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="mark symbols" aria-hidden="true">
+                <img class="light-only" src="/assets/img/hz-ts-light.png" alt="" /><img class="dark-only" src="/assets/img/hz-ts-dark.png" alt="" />
+              </span>
+              <div>
+                <h3>SIGMETs on the route</h3>
+                <p>
+                  Thunderstorm, turbulence, icing, mountain wave, volcanic ash and tropical cyclone SIGMETs with ICAO
+                  symbols, filtered to your levels, with the times your route enters and leaves each area.
+                </p>
+              </div>
+            </li>
+            <li>
+              <svg class="mark" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 9.5C7 6 13 6 18.5 8.5M15.8 5.6l3 3-3.9 1.2M8 8.2 7.2 5.6M10.2 7.6 9.6 5" />
+                <path d="M6 20.5h12a2.6 2.6 0 0 0 .4-5.2 3.4 3.4 0 0 0-6.3-2.2 2.8 2.8 0 0 0-5 1.6 2.9 2.9 0 0 0-1.1 5.8Z" />
+              </svg>
+              <div>
+                <h3>SIGWX charts</h3>
+                <p>
+                  WAFS high and mid level significant weather charts, opened at the valid time closest to your flight and
+                  kept on the phone. Pinch to zoom.
+                </p>
+              </div>
+            </li>
+            <li>
+              <svg class="mark" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 3.5h10l4 4v13H5z" /><path d="M8.5 11h7M8.5 14.5h7M8.5 18h4" />
+              </svg>
+              <div>
+                <h3>Search and notes</h3>
+                <p>
+                  Find any airport by ICAO, IATA, name or city, and keep your own notes on stands, taxi and fuel for the
+                  next time you go there.
+                </p>
+              </div>
+            </li>
+            <li>
+              <svg class="mark" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 16.5 16.5 3l4.5 4.5L7.5 21z" /><path d="m7 12.5 2 2M10 9.5l2 2M13 6.5l2 2" />
+              </svg>
+              <div>
+                <h3>Your units</h3>
+                <p>Metres or feet, °C or °F, hPa or inHg. The raw METAR and TAF text is never rewritten.</p>
+              </div>
+            </li>
+            <li>
+              <svg class="mark" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" />
+              </svg>
+              <div>
+                <h3>Your corridor</h3>
+                <p>
+                  Choose 100, 140 or 180 NM either side of the route and the shortest runway an alternate needs. Only
+                  airports with scheduled service are listed.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="offline-title">
+        <div class="wrap split reverse">
+          <div class="prose">
+            <h2 id="offline-title">Made for airplane mode</h2>
+            <p>
+              Open your route before you push back. In the air NOSIG shows the last weather, SIGMETs and SIGWX charts it
+              downloaded and says exactly how old they are.
+            </p>
+            <span class="status-line"><i aria-hidden="true"></i>Offline · weather from 1056Z (3 h 22 min old)</span>
+            <p>
+              SIGMETs that expire on the way stay on the map, faded and marked with their end time, until newer data can
+              be loaded.
+            </p>
+          </div>
+          <div class="phone">
+            <img src="/assets/img/route-dark.webp" width="620" height="1271" loading="lazy" alt="NOSIG in dark mode, offline, showing the saved route and weather" />
+          </div>
+        </div>
+      </section>
+
+      <section class="sources" aria-labelledby="sources-title">
+        <div class="wrap prose">
+          <h2 id="sources-title">Where the data comes from</h2>
+          <ul>
+            <li>METAR, TAF, SIGMETs and SIGWX charts: NOAA Aviation Weather Center (aviationweather.gov); SIGWX issued by WAFC Washington</li>
+            <li>Airports and runways: OurAirports (public domain)</li>
+            <li>Coastlines, borders and cities: Natural Earth (public domain)</li>
+            <li>FIR boundaries: VATSpy Data Project, CC BY-SA 4.0</li>
+          </ul>
+          <p>
+            NOSIG is for situational awareness. It is not an official briefing and not for navigation; always use your
+            operator’s briefing and the latest official information.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap">
+        <p>© 2026 NOSIG. Not affiliated with NOAA, ICAO or any airline.</p>
+        <nav aria-label="Footer">
+          <a href="/support/">Support</a>
+          <a href="/privacy/">Privacy</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
