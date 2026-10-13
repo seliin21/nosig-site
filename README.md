@@ -1,6 +1,6 @@
 # nosigapp.com
 
-Website for the NOSIG iPhone app: home page, support and privacy policy.
+Website for the NOSIG app (iPhone and Android): home page, support and privacy policy.
 Plain HTML and CSS, published with GitHub Pages at https://nosigapp.com.
 
 ## Edit and publish
