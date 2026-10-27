@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["YBM64US9FP.com.nosigapp.nosig"],
+        "components": [
+          { "/": "/r", "comment": "Shared route" },
+          { "/": "/r/*", "comment": "Shared route" }
+        ]
+      }
+    ]
+  }
+}

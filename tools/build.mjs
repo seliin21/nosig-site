@@ -2,6 +2,7 @@
 //   src/index.html   -> index.html          (hero chart SVG inlined)
 //   src/privacy.html -> privacy/index.html
 //   src/support.html -> support/index.html
+//   src/r.html       -> r/index.html          (shared routes from the app)
 // If analytics.html exists (e.g. the Cloudflare Web Analytics snippet), it is added to every page.
 //   node tools/build.mjs
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -15,6 +16,7 @@ const pages = [
   ['src/index.html', 'index.html'],
   ['src/privacy.html', 'privacy/index.html'],
   ['src/support.html', 'support/index.html'],
+  ['src/r.html', 'r/index.html'],
   ['src/404.html', '404.html'],
 ];
 for (const [from, to] of pages) {

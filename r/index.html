@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shared route · NOSIG</title>
+    <meta name="description" content="A route shared from NOSIG: open it in the app to see every enroute alternate with its METAR and TAF." />
+    <meta name="apple-itunes-app" content="app-id=6821109646" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    
+  </head>
+  <body>
+    <header class="site-head wrap">
+      <a class="brand" href="/"><img src="/assets/img/icon-96.png" alt="" width="48" height="48" />NOSIG</a>
+      <nav aria-label="Site">
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+    </header>
+    <main class="page wrap">
+      <article>
+        <p class="updated">Shared route</p>
+        <h1 id="route">A route shared from NOSIG</h1>
+        <p id="details">Open it in NOSIG to see every airport within 140&nbsp;NM of the route with its METAR and the TAF for the time you pass it.</p>
+        <p>
+          <a class="button" id="open" href="nosig://r">Open in NOSIG</a>
+        </p>
+        <p>
+          Don’t have NOSIG yet?
+          <a href="https://apps.apple.com/app/id6821109646">Download it on the App Store</a> for iPhone and iPad. Coming soon to
+          Google Play. Then open this link again.
+        </p>
+      </article>
+    </main>
+    <script>
+      // Same format as the app (src/core/route-link.ts): f=DEP-ARR, t=HHMM, l=level, v=lat,lon~lat,lon.
+      (function () {
+        var query = location.search.replace(/^\?/, '');
+        var params = {};
+        query.split('&').forEach(function (part) {
+          var i = part.indexOf('=');
+          if (i > 0) {
+            try {
+              params[part.slice(0, i)] = decodeURIComponent(part.slice(i + 1).replace(/\+/g, ' '));
+            } catch (e) {}
+          }
+        });
+        var ends = String(params.f || '').toUpperCase().split('-');
+        var icao = /^[A-Z0-9]{3,4}$/;
+        if (ends.length !== 2 || !icao.test(ends[0]) || !icao.test(ends[1])) return;
+        var title = ends[0] + ' → ' + ends[1];
+        var parts = [];
+        if (/^([01]\d|2[0-3])[0-5]\d$/.test(params.t || '')) parts.push('ETD ' + params.t + 'Z');
+        var fl = Number(params.l);
+        if (fl >= 10 && fl <= 510 && Math.floor(fl) === fl) parts.push('FL' + ('00' + fl).slice(-3));
+        var via = String(params.v || '').split('~').filter(function (p) { return /^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(p); }).length;
+        if (via) parts.push(via + ' via point' + (via === 1 ? '' : 's'));
+        document.getElementById('route').textContent = title;
+        document.title = title + ' · NOSIG';
+        if (parts.length) document.getElementById('details').textContent = parts.join(' · ') + '. Open it in NOSIG to see every airport within 140 NM of the route with its METAR and the TAF for the time you pass it.';
+        document.getElementById('open').href = 'nosig://r?' + query;
+      })();
+    </script>
+  </body>
+</html>
