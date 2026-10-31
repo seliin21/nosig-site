@@ -2,6 +2,7 @@
 //   src/index.html   -> index.html          (hero chart SVG inlined)
 //   src/privacy.html -> privacy/index.html
 //   src/support.html -> support/index.html
+//   src/delete-data.html -> delete-data/index.html (data deletion steps, linked from Google Play)
 //   src/r.html       -> r/index.html          (shared routes from the app)
 // If analytics.html exists (e.g. the Cloudflare Web Analytics snippet), it is added to every page.
 //   node tools/build.mjs
@@ -16,6 +17,7 @@ const pages = [
   ['src/index.html', 'index.html'],
   ['src/privacy.html', 'privacy/index.html'],
   ['src/support.html', 'support/index.html'],
+  ['src/delete-data.html', 'delete-data/index.html'],
   ['src/r.html', 'r/index.html'],
   ['src/404.html', '404.html'],
 ];
